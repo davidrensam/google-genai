@@ -110,7 +110,7 @@ build on. Separate documentation tree, separate release notes.
 | Product page | `cloud.google.com/gemini-enterprise` |
 
 See [related products](../11-related-products/00-gemini-enterprise-app.md), and
-the [name collisions](02-ecosystem-changelog.md#names-that-are-easy-to-confuse)
+the [name collisions](../12-glossary/00-glossary.md#names-that-are-easy-to-confuse)
 this creates.
 
 ### Other products

@@ -38,9 +38,10 @@ labelled unofficial when linked; blogs are for dating a change, never for
 establishing behaviour.
 
 **Never transcribe volatile data.** Prices, quotas, rate limits, region lists,
-per-model availability — link them, do not copy them. They change without notice,
-and a guide that is confidently wrong is worse than no guide. Explain how to read
-the page and what the numbers imply; leave the numbers on Google's side.
+per-model availability — link them, do not copy them. They change without
+notice, and a confidently wrong number does more damage than a missing one.
+Explain how to read the page and what the numbers imply; leave the numbers on
+Google's side.
 
 **One concept, one home.** Several topics legitimately appear in more than one
 module. Each is explained once, in its canonical home, and the other pages link
@@ -71,7 +72,7 @@ When you mention a renamed product for the first time on a page, note the old
 name once in parentheses, then drop it. Renames themselves belong in
 [the glossary](12-glossary/01-equivalences-and-historical-names.md), and a rename
 is only a rename when the new name replaced the old one **for everybody** — if
-it depends on the reader's licence or billing tier, it is a conditional state and
+it depends on the reader's license or billing tier, it is a conditional state and
 it is documented differently.
 
 ## Running the code
@@ -95,8 +96,9 @@ python3 .github/scripts/check_links.py      # relative links and anchors
 python3 .github/scripts/check_freshness.py  # Last verified dates
 ```
 
-The link check runs on every push and pull request, and fails the build — a
-broken internal link is a mechanical error with no judgement involved.
+The link check runs on pushes to `main` and `development` and on every pull
+request, and fails the build — a broken internal link is a mechanical error
+with no judgement involved.
 
 The freshness check runs weekly and never fails anything. It opens a single
 tracking issue listing pages whose `Last verified` date has passed ninety days,

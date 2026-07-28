@@ -95,10 +95,10 @@ built around a persistent interaction rather than a single request. The older
 [two calls, one client](../00-orientation/01-nomenclature-and-renames.md#two-calls-one-client).
 
 **Open models** — Google's term for Gemma. It means the weights are downloadable
-and you can run them yourself. It does **not** by itself mean open source: Gemma
-1 through 3 shipped under a custom, non-OSI licence. Gemma 4 is Apache 2.0. The
-branding never changed; the licence did, and only from version 4 — so any claim
-about Gemma licensing has to name a generation.
+and you can run them yourself. It does **not** by itself mean open source — the
+license differs by generation; see the
+[license change entry](../resources/02-ecosystem-changelog.md#2026-03-31--gemma-4-and-a-license-change)
+in the changelog.
 
 **Managed agent** — an agent Google runs for you, as opposed to one you deploy.
 

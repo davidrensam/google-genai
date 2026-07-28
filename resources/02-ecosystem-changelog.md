@@ -93,14 +93,13 @@ Assist is not discontinued.** Organizations on a Gemini Code Assist Standard or
 Enterprise license keep working access, with continued access to current Gemini
 models. What ended was the consumer tier of those two surfaces.
 
-Getting this distinction wrong in either direction is easy — "Gemini CLI is
-dead" and "nothing changed" are both wrong, and which one applies depends
-entirely on the reader's license. See
-[developer tools](../11-related-products/03-code-assistance-and-developer-tools.md).
+How to read that split — and why both "Gemini CLI is dead" and "nothing
+changed" are wrong — is covered in
+[Gemini CLI: split by license](../00-orientation/01-nomenclature-and-renames.md#gemini-cli-split-by-license).
 
 *Source: Google Developers Blog.*
 
-### 2026-03-31 — Gemma 4, and a licence change
+### 2026-03-31 — Gemma 4, and a license change
 
 Gemma 4 is released under **Apache 2.0**. Gemma 1 through 3 shipped under the
 custom, non-OSI "Gemma Terms of Use", which carried a prohibited-use policy and
@@ -110,7 +109,7 @@ This splits a claim that used to be simple. "Gemma is not open source, Google
 calls them open models" was correct for years and is now only half true —
 Google's own Gemma 4 announcement writes *"This open-source license provides a
 foundation for complete developer flexibility"*, while the family is still
-branded "open models" everywhere else. The branding did not change; the licence
+branded "open models" everywhere else. The branding did not change; the license
 did, and only from version 4.
 
 Any statement about Gemma licensing has to name a generation.
@@ -121,11 +120,9 @@ Any statement about Gemma licensing has to name a generation.
 place of `client.models.generate_content()`, and there are dedicated *"Migrate
 to Interactions API"* and *"Interactions breaking changes"* pages.
 
-`generateContent` is **not deprecated** — the official wording is that it
-*"remains fully supported"*, and no shutdown date exists. This is a
-recommendation moving, not an API dying, and it is this repository's worked
-example of something
-[supported but no longer recommended](../00-orientation/01-nomenclature-and-renames.md#every-name-has-a-state).
+`generateContent` is not deprecated and has no shutdown date. What that state
+means — and the exact official wording — lives in
+[two calls, one client](../00-orientation/01-nomenclature-and-renames.md#two-calls-one-client).
 
 Undated on purpose: the shift is plain in the documentation, but no announcement
 fixing a date has been verified.
@@ -137,9 +134,10 @@ and `cloud.google.com/products/gemini-enterprise-agent-platform` is the product
 page. `GoogleCloudPlatform/generative-ai` describes it as "the latest evolution
 of Vertex AI".
 
-Existing services continue to work; this was a consolidation and a rename, not
-a migration. The exact announcement date is not yet confirmed against an
-official source and is deliberately omitted here.
+Secondary coverage describes it as a consolidation that required no migration
+from existing customers; that framing has not been verified against an official
+source. The exact announcement date is likewise unconfirmed and deliberately
+omitted here.
 
 Two visible consequences:
 
@@ -147,25 +145,17 @@ Two visible consequences:
   `docs.cloud.google.com/...` with a `301`. Old links keep working, which is
   why so many of them are still circulating.
 - **The SDK carries both names.** The client parameter is now `enterprise`,
-  with `vertexai` retained and documented as a legacy flag. Both
-  `GOOGLE_GENAI_USE_ENTERPRISE` and `GOOGLE_GENAI_USE_VERTEXAI` are read; when
-  they conflict, the newer one wins and the SDK emits a warning.
+  with `vertexai` retained as a documented legacy flag; the environment
+  variables and their conflict behavior are covered in
+  [the rename, visible in code](../00-orientation/01-nomenclature-and-renames.md#the-rename-visible-in-code).
 
 ### Agent Engine became Agent Runtime
 
 ADK documentation consistently uses **Agent Runtime** for the managed service,
-and serves it under `adk.dev/deploy/agent-runtime/`.
-
-The CLI has not followed:
-
-```bash
-adk deploy agent_engine --project=... --region=... my_agent
-```
-
-Product renamed, subcommand not. This is the clearest single illustration of
-why this repository exists — and a reminder that when documentation and tooling
-disagree about a name, both are telling you the truth about different moments
-in time.
+and serves it under `adk.dev/deploy/agent-runtime/`. The CLI has not followed —
+the subcommand is still `agent_engine`. The full story, including what that
+mismatch tells you, is in
+[Agent Engine → Agent Runtime](../00-orientation/01-nomenclature-and-renames.md#agent-engine--agent-runtime).
 
 ### Dialogflow CX console superseded
 

@@ -34,17 +34,37 @@ def markdown_files() -> list[Path]:
 
 
 def slug(text: str) -> str:
-    """Approximate GitHub's heading-anchor algorithm."""
-    text = re.sub(r"`|\*|_", "", text)          # strip inline formatting
+    """Approximate GitHub's heading-anchor algorithm.
+
+    Two details matter and are easy to get wrong: GitHub keeps underscores,
+    and it converts EACH whitespace character to a hyphen without collapsing
+    runs — so "Agent Engine → Agent Runtime" (arrow removed, two spaces left)
+    becomes "agent-engine--agent-runtime", double hyphen included.
+    """
+    text = re.sub(r"`|\*", "", text)            # strip inline formatting
     text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)  # links -> their text
     text = text.strip().lower()
     text = re.sub(r"[^\w\s-]", "", text)
-    return re.sub(r"\s+", "-", text)
+    return re.sub(r"\s", "-", text)
+
+
+def strip_fences(text: str) -> str:
+    """Drop fenced code blocks — a `# comment` inside one is not a heading,
+    and a link-looking string inside one is not a link."""
+    kept: list[str] = []
+    fenced = False
+    for line in text.splitlines():
+        if line.lstrip().startswith(("```", "~~~")):
+            fenced = not fenced
+            continue
+        if not fenced:
+            kept.append(line)
+    return "\n".join(kept)
 
 
 def anchors(path: Path) -> set[str]:
     found: set[str] = set()
-    for line in path.read_text(encoding="utf-8").splitlines():
+    for line in strip_fences(path.read_text(encoding="utf-8")).splitlines():
         m = HEADING.match(line)
         if m:
             found.add(slug(m.group(1)))
@@ -56,7 +76,7 @@ def main() -> int:
     checked = 0
 
     for md in markdown_files():
-        for link in LINK.findall(md.read_text(encoding="utf-8")):
+        for link in LINK.findall(strip_fences(md.read_text(encoding="utf-8"))):
             if link.startswith(("http://", "https://", "mailto:")):
                 continue
             checked += 1

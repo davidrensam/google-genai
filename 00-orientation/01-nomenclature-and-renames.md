@@ -29,7 +29,7 @@ investigate, you move on. The third state is silent everywhere and never fails �
 so its cost is not broken code, it is new code written against the surface
 Google has stopped pointing at. Nothing will tell you. You have to go looking.
 
-The clearest live example is the model call itself, and it is covered under
+The live example is the model call itself — see
 [two calls, one client](#two-calls-one-client) below.
 
 ## The renames that matter
@@ -37,8 +37,7 @@ The clearest live example is the model call itself, and it is covered under
 ### Vertex AI → Gemini Enterprise Agent Platform
 
 The platform formerly called Vertex AI is now the **Gemini Enterprise Agent
-Platform** — its own documentation shortens it to **Agent Platform**, and its
-product page carries "(formerly Vertex AI)" in the title.
+Platform** — its own documentation shortens it to **Agent Platform**.
 
 What still answers to the old name:
 
@@ -75,7 +74,7 @@ Three libraries used to reach Gemini models. One does now.
 | Library | State |
 |---|---|
 | `google-genai` (Python) · `@google/genai` (JS) — one SDK, five languages | **Current.** GA since May 2025 |
-| `google-generativeai` (Python) · `@google/generative-ai` (JS) | **Switched off.** Support ended permanently on 2025-11-30 |
+| `google-generativeai` (Python) · `@google/generative-ai` (JS) | **End of support** — 2025-11-30, permanently. Unmaintained, not proven dead |
 | The generative AI module of the Vertex AI SDK | **Switched off.** Deprecated 2025-06-24, shut down 2026-06-24 |
 
 The second row's Python repository was literally renamed to
@@ -111,7 +110,7 @@ that it *"remains fully supported"*, and no shutdown date has been announced.
 What changed is where the documentation points: the Interactions API is now what
 Google recommends for all new development, and the quickstart teaches it first.
 
-That makes this the cleanest example of the third state. Nothing errors. Nothing
+That makes this the third state in its purest form. Nothing errors. Nothing
 warns. Your tests pass. The only signal is that Google moved its own front door,
 and there are now dedicated *"Migrate to Interactions API"* and *"Interactions
 breaking changes"* pages — the second of which is where to look before you
@@ -123,23 +122,23 @@ code, write against the surface the vendor is documenting.
 ## Not a rename: states that depend on who you are
 
 Some names have no single state at all. They are current or gone depending on
-which licence the reader holds, which billing tier they are on, or which access
+which license the reader holds, which billing tier they are on, or which access
 path they took. These are worth separating out, because a decoder that reports
 one global answer will be wrong for half its audience.
 
-### Gemini CLI: split by licence
+### Gemini CLI: split by license
 
 On 2026-06-18, Gemini CLI and the Gemini Code Assist IDE extensions stopped
 serving requests **for free users and Google AI Pro and Ultra subscribers**,
 who move to **Antigravity CLI**, part of the Antigravity development platform.
 
 But **Gemini Code Assist is not discontinued.** Organizations on a Standard or
-Enterprise licence keep working access — and that licence still includes Gemini
+Enterprise license keep working access — and that license still includes Gemini
 CLI, which the product page continues to market as a feature.
 
 So "Gemini CLI was renamed to Antigravity CLI" is wrong, and so is "Gemini CLI
 is dead". The same name is simultaneously current and switched off, and which
-one applies to you depends entirely on your licence. See
+one applies to you depends entirely on your license. See
 [developer tools](../11-related-products/03-code-assistance-and-developer-tools.md).
 
 ### Gemma: split by billing tier
@@ -197,7 +196,7 @@ in another.
 | Instructions to install Gemini CLI | Identifies the audience, not the date — current for Code Assist Standard/Enterprise, retired for everyone else |
 
 The last row is the one to read carefully. It is the only signal in the table
-that does not date anything: because Gemini CLI survives on enterprise licences,
+that does not date anything: because Gemini CLI survives on enterprise licenses,
 a tutorial published today can legitimately tell you to install it. Everything
 else here narrows *when* a page was written; that row narrows *who it was written
 for*.
@@ -208,10 +207,10 @@ Renames are one hazard; collisions are the other — live products whose names
 are nearly identical. Gemini Enterprise is not the Gemini Enterprise Agent
 Platform; Agent Gallery is not Agent Garden; there are three products with
 "Studio" in the name. The
-[collision table](../resources/02-ecosystem-changelog.md#names-that-are-easy-to-confuse)
+[collision table](../12-glossary/00-glossary.md#names-that-are-easy-to-confuse)
 lists them side by side, and the
-[glossary](../12-glossary/01-equivalences-and-historical-names.md) will hold
-the full old-name-to-new-name lookup.
+[glossary](../12-glossary/01-equivalences-and-historical-names.md) holds the
+full old-name-to-new-name lookup.
 
 ## How this repository writes names
 

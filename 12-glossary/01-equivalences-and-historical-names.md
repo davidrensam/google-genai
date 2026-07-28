@@ -4,7 +4,7 @@ You found an old name. This page tells you what it is now, and whether the old
 one still works.
 
 Arrows here mean one thing: **B replaced A, for everybody.** If a name's state
-depends on your licence, your billing tier, or which access path you took, it is
+depends on your license, your billing tier, or which access path you took, it is
 not a rename and it does not get an arrow — those live in
 [not a rename](#not-renames-conditional-states) at the bottom.
 
@@ -22,12 +22,14 @@ not a rename and it does not get an arrow — those live in
 
 | Old | Current | State |
 |---|---|---|
-| `google-generativeai` (Python) | `google-genai` | **Switched off** — support ended 2025-11-30 |
-| `@google/generative-ai` (JS) | `@google/genai` | **Switched off** — same date |
+| `google-generativeai` (Python) | `google-genai` | **End of support** — 2025-11-30, permanently |
+| `@google/generative-ai` (JS) | `@google/genai` | **End of support** — same date; listed as "not actively maintained" on the official libraries page |
 | Generative AI module of the Vertex AI SDK (`import vertexai`) | `google-genai` | **Switched off** — deprecated 2025-06-24, shut down 2026-06-24 |
 
-All three now fail rather than warn. A tutorial built on any of them is not
-outdated, it is broken.
+The third row fails outright: `import vertexai` for generative calls produces an
+error today, not a warning. The first two are expired — permanently unsupported,
+which is a reason not to follow a tutorial built on them, not evidence that its
+code already fails.
 
 ## Code and configuration
 
@@ -36,8 +38,7 @@ outdated, it is broken.
 | `vertexai=True` | `enterprise=True` | Yes — documented as *"Legacy flag for `enterprise`"* |
 | `GOOGLE_GENAI_USE_VERTEXAI` | `GOOGLE_GENAI_USE_ENTERPRISE` | Yes — both are read; on conflict the newer wins and the SDK warns |
 
-The SDK keeping both spellings alive is the clearest evidence of the platform
-rename that exists anywhere — see
+The SDK keeping both spellings alive is the rename preserved in amber — see
 [the rename, visible in code](../00-orientation/01-nomenclature-and-renames.md#the-rename-visible-in-code).
 
 ## URLs
@@ -63,7 +64,7 @@ depends on the reader.
 
 | Name | Why it has no single answer |
 |---|---|
-| **Gemini CLI** | Stopped serving free, AI Pro and AI Ultra users on 2026-06-18, who move to Antigravity CLI. Still shipped with Gemini Code Assist Standard and Enterprise licences. Simultaneously current and retired, by licence |
+| **Gemini CLI** | Stopped serving free, AI Pro and AI Ultra users on 2026-06-18, who move to Antigravity CLI. Still shipped with Gemini Code Assist Standard and Enterprise licenses. Simultaneously current and retired, by license |
 | **`generateContent`** | Not deprecated, no shutdown date, officially *"remains fully supported"* — but the Interactions API is now what the documentation recommends for new development |
 | **Gemma on the Gemini API** | Available on the free tier only, and absent from both the models catalog and the rate-limits page |
 
@@ -93,9 +94,9 @@ is worse than one that admits the gap.
 
 ## How to use this page
 
-**Trust the breadcrumb over the prose.** When a documentation page's navigation
-and its body text disagree on a name, the navigation is regenerated on publish
-and the prose is edited by hand. The navigation is newer.
+**Trust the breadcrumb over the prose.** The navigation is newer — why, and the
+other tells, are in
+[how to read a documentation page critically](../resources/00-official-documentation.md#how-to-read-a-documentation-page-critically).
 
 **Check whether the tooling agrees with the product.** `adk deploy agent_engine`
 under documentation that says Agent Runtime is not a bug in either — it dates

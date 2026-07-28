@@ -62,7 +62,7 @@ file, because on this path none of those exist.
 `client.models.generate_content()` instead. That one still works — it is not
 deprecated — but it is no longer what the documentation recommends for new code.
 This is the first place you will feel the ecosystem moving underneath you, and
-it is covered in
+settling it is the whole job of
 [interactions and generate_content](../04-development-with-models/02-interactions-and-generate-content.md).
 
 The runnable version of this, with error handling and the variations worth

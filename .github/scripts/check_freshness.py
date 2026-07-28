@@ -26,7 +26,7 @@ REPO = Path(__file__).resolve().parents[2]
 SKIP_DIRS = {".git", ".venv", "node_modules", "__pycache__", ".github"}
 
 # Files that make no factual claims about the ecosystem and need no date.
-EXEMPT = {"README.md", "CONTRIBUTING.md", "LICENSE.md"}
+EXEMPT = {"README.md", "CONTRIBUTING.md"}
 
 STALE_AFTER_DAYS = 90
 MARKER = re.compile(r"Last verified:\s*(\d{4}-\d{2}-\d{2})")
@@ -60,7 +60,13 @@ def main() -> int:
         if not m:
             missing.append(page)
             continue
-        verified = datetime.strptime(m.group(1), "%Y-%m-%d").date()
+        try:
+            verified = datetime.strptime(m.group(1), "%Y-%m-%d").date()
+        except ValueError:
+            # A typo'd date (2026-13-01) must not crash a never-fails check;
+            # report the page as needing a date instead.
+            missing.append(page)
+            continue
         age = (today - verified).days
         if age > args.days:
             stale.append((page, verified, age))

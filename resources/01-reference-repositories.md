@@ -43,9 +43,9 @@ Platform; you switch backends with a client flag, not a different library.
 |---|---|
 | `google-gemini/deprecated-generative-ai-python` | The old Python SDK. Its README states: *"All support for this repository ended permanently on November 30, 2025."* The repository was renamed to carry `deprecated-` in its own name |
 
-That renaming is worth seeing once. It is the clearest signal Google has sent
-about the SDK consolidation, and it is why any tutorial importing
-`google.generativeai` should be treated as expired rather than merely old.
+That renaming is worth seeing once. It is as blunt as Google gets about the SDK
+consolidation, and it is why any tutorial importing `google.generativeai`
+should be treated as expired rather than merely old.
 
 ## Tier 3 — under Google organizations, not officially supported
 
@@ -71,7 +71,7 @@ updated on release cadence; code gets updated on merge. When they disagree, the
 code is right.
 
 **Deprecated parameters are documented in docstrings, not in guides.** The
-clearest evidence of the platform rename is not on any documentation page — it
+hardest evidence of the platform rename is not on any documentation page — it
 is in the SDK's own client constructor, where the old flag survives, described
 as legacy, alongside the new one. Renames are visible in code long before the
 prose catches up.
@@ -81,8 +81,7 @@ renamed, the documentation changes first and the command-line interface changes
 last, if ever. A mismatch between the two tells you a rename happened and
 roughly how recently.
 
-**Star counts measure popularity, not authority.** The most-starred repository
-in this list is tier 3.
+**Star counts measure popularity, not authority.**
 
 ## Related
 
