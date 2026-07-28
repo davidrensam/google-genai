@@ -42,7 +42,9 @@ can replace what sits on one side without rewriting what sits on the other.
 This is the part most introductions skip, and the reason the ecosystem feels
 heavier than it is. Walk up the stack and ask what a change actually costs you:
 
-- Swap **Gemini for Gemma** — your code does not change.
+- Swap **Gemini for Gemma** — your code does not change, though what you are
+  entitled to does: Gemma is reachable through the Gemini API on the free tier
+  only. The call is identical; the billing tier is not.
 - Swap the **Developer API for Agent Platform** — authentication changes
   completely, the endpoint changes, your model calls do not.
 - Swap **direct SDK calls for ADK** — the shape of your program changes, the

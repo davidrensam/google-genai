@@ -9,14 +9,14 @@ here.
 
 ## Where change is announced
 
-Four feeds cover the stack this repository maps. Related products keep feeds of
+Five feeds cover the stack this repository maps. Related products keep feeds of
 their own — Gemini Enterprise has
-[separate release notes](00-official-documentation.md#gemini-enterprise) — but
-nothing that breaks the stack lands outside these four.
+[separate release notes](00-official-documentation.md#gemini-enterprise).
 
 | Feed | URL | Covers |
 |---|---|---|
 | Gemini API release notes | `ai.google.dev/gemini-api/docs/changelog` | Models, API features, parameter deprecations. History back to December 2023 |
+| Gemini API migration pages | `ai.google.dev/gemini-api/docs/migrate-to-interactions` · `.../interactions-breaking-changes-may-2026` | Surface changes that never appear in release notes |
 | Agent Platform release notes | `docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes` | The managed platform |
 | Agent Platform deprecations | `docs.cloud.google.com/vertex-ai/generative-ai/docs/deprecations` | Shutdown dates. The table that actually breaks code |
 | ADK releases | GitHub releases on `google/adk-python` | Roughly every two weeks |
@@ -25,6 +25,12 @@ The deprecations table is the one to check first. Release notes tell you what
 you *could* start using; the deprecations table tells you what has already
 stopped working.
 
+The second row exists because of a gap this page had to learn the hard way. The
+Interactions API became the recommended way to call a Gemini model without ever
+appearing in a release-notes entry or a deprecations table — it arrived as
+standalone documentation pages. **A change that deprecates nothing can still
+displace everything**, and no feed built around deprecation will catch it.
+
 ## Running a check
 
 Before writing or revising any page:
@@ -32,7 +38,8 @@ Before writing or revising any page:
 1. Open the deprecations table. Anything with a shutdown date in the past is no
    longer a warning — it is a break.
 2. Scan the two release-notes feeds since the `Last verified` date on the page
-   you are about to touch.
+   you are about to touch — then check the migration pages, which the feeds do
+   not cover.
 3. Confirm the product name in the documentation breadcrumb still matches the
    name used in the page.
 4. Update the `Last verified` line, even when nothing changed. A confirmed date
@@ -92,6 +99,36 @@ entirely on the reader's license. See
 [developer tools](../11-related-products/03-antigravity-and-developer-tools.md).
 
 *Source: Google Developers Blog.*
+
+### 2026-03-31 — Gemma 4, and a licence change
+
+Gemma 4 is released under **Apache 2.0**. Gemma 1 through 3 shipped under the
+custom, non-OSI "Gemma Terms of Use", which carried a prohibited-use policy and
+a clause allowing Google to restrict usage remotely.
+
+This splits a claim that used to be simple. "Gemma is not open source, Google
+calls them open models" was correct for years and is now only half true —
+Google's own Gemma 4 announcement writes *"This open-source license provides a
+foundation for complete developer flexibility"*, while the family is still
+branded "open models" everywhere else. The branding did not change; the licence
+did, and only from version 4.
+
+Any statement about Gemma licensing has to name a generation.
+
+### The Interactions API became the recommended call surface
+
+`ai.google.dev/gemini-api/docs` now teaches `client.interactions.create()` in
+place of `client.models.generate_content()`, and there are dedicated *"Migrate
+to Interactions API"* and *"Interactions breaking changes"* pages.
+
+`generateContent` is **not deprecated** — the official wording is that it
+*"remains fully supported"*, and no shutdown date exists. This is a
+recommendation moving, not an API dying, and it is this repository's worked
+example of something
+[supported but no longer recommended](../00-orientation/01-nomenclature-and-renames.md#every-name-has-a-state).
+
+Undated on purpose: the shift is plain in the documentation, but no announcement
+fixing a date has been verified.
 
 ### Vertex AI became the Gemini Enterprise Agent Platform
 
@@ -196,6 +233,8 @@ Tracked here so they are not silently forgotten:
 
 ---
 _Last verified: 2026-07-28 against `ai.google.dev/gemini-api/docs/changelog`,
+`ai.google.dev/gemini-api/docs/migrate-to-interactions`,
+`deepmind.google/models/gemma`,
 `docs.cloud.google.com/vertex-ai/generative-ai/docs/deprecations`,
 `docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes`,
 `adk.dev/deploy/`, and `docs.cloud.google.com/dialogflow/cx/docs/concept/version`._

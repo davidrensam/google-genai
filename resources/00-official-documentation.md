@@ -69,10 +69,21 @@ The developer-facing API, reachable with an API key and no Google Cloud project.
 
 | What | URL |
 |---|---|
-| Documentation root | `ai.google.dev` |
+| **Documentation root** | `ai.google.dev/gemini-api/docs` |
+| Getting started | `ai.google.dev/gemini-api/docs/get-started` |
 | Release notes | `ai.google.dev/gemini-api/docs/changelog` |
 | Client libraries | `ai.google.dev/gemini-api/docs/libraries` |
 | Migration to the unified SDK | `ai.google.dev/gemini-api/docs/migrate` |
+| Site root (marketing) | `ai.google.dev` |
+
+Note the last row. `ai.google.dev` is the product landing page, not documentation
+— it is a tier 4 source by the scale above, and at the time of writing it
+promotes one model generation in its banner while its own metadata names an
+older one. **The documentation root is `/gemini-api/docs`**, and that is what
+pages here cite.
+
+Also: `/gemini-api/docs/quickstart` `301`-redirects to
+`/gemini-api/docs/get-started`. The landing page still links the old path.
 
 These two products have separate documentation sites, separate release notes,
 and separate versioning. That split is the single most common source of
