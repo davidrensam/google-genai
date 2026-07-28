@@ -21,6 +21,14 @@ steps are in the [Gemini API documentation](https://ai.google.dev). That is the
 entire entry cost: no Google Cloud account, no project, no billing setup, no
 `gcloud`.
 
+**One trap, and it costs people their first hour.** Issue the key in a project
+that has **no billing account attached**. Attaching billing does not raise your
+free-tier limits — it moves you off the free tier onto a paid one. If that paid
+plan is Prepay and you have not bought credits, every call fails with a `429`,
+including the ones that would have been free. The key authenticates fine, which
+makes it look like a code problem when it is an account problem. Check the
+Billing Tier column in the AI Studio key list: it should say Free.
+
 The SDK reads the key from either `GEMINI_API_KEY` or `GOOGLE_API_KEY`:
 
 ```bash
@@ -34,7 +42,9 @@ Two rules from day one:
   [secrets management](../08-production/02-secrets-management.md).
 - **Usage tiers and rate limits are read on the official pages, not here.**
   They change without notice; this repository links them instead of
-  transcribing them.
+  transcribing them. The
+  [billing page](https://ai.google.dev/gemini-api/docs/billing) is where the
+  tiers and the Prepay/Postpay distinction live.
 
 ## Cloud path: a Google Cloud project
 
@@ -91,7 +101,9 @@ Every code sample here is meant to run as-is after that, with nothing but the
 key in your environment. If one does not, that is a bug — open an issue.
 
 ---
-_Last verified: 2026-07-28. Environment variables and client flags checked
-against the `googleapis/python-genai` source; key issuance and ADC pointers
-against `ai.google.dev` and the SDK's own documentation. See
+_Last verified: 2026-07-29. The free-tier and billing behavior was confirmed by
+running a real call on both a billing-attached project (fails with `429`) and a
+free one (works). Environment variables and client flags checked against the
+`googleapis/python-genai` source; tiers against
+`ai.google.dev/gemini-api/docs/billing`. See
 [resources](../resources/00-official-documentation.md)._

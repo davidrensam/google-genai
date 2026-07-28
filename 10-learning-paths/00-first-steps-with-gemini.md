@@ -49,7 +49,7 @@ interaction = client.interactions.create(
     model="gemini-3.6-flash",
     input="In one sentence: what is the difference between a model and an API?",
 )
-print(interaction.outputs[-1].text)
+print(interaction.output_text)
 ```
 
 That is the whole thing. Two points in it are worth pausing on:
@@ -120,5 +120,6 @@ Not oversights — decisions, so you do not go looking for them:
   transcribes them.
 
 ---
-_Last verified: 2026-07-28 against `ai.google.dev/gemini-api/docs/get-started`
-and the `googleapis/python-genai` client source._
+_Last verified: 2026-07-29. The snippet was executed against the Gemini
+Developer API on `google-genai` 2.14.0. Documentation checked against
+`ai.google.dev/gemini-api/docs/get-started`._
