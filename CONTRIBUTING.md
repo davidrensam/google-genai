@@ -86,6 +86,28 @@ the module that explains it, not in a separate examples tree.
 Never commit an API key, and never write one into a sample — not even a
 plausible-looking fake.
 
+## Automated checks
+
+Two run for you, both standard library only:
+
+```bash
+python3 .github/scripts/check_links.py      # relative links and anchors
+python3 .github/scripts/check_freshness.py  # Last verified dates
+```
+
+The link check runs on every push and pull request, and fails the build — a
+broken internal link is a mechanical error with no judgement involved.
+
+The freshness check runs weekly and never fails anything. It opens a single
+tracking issue listing pages whose `Last verified` date has passed ninety days,
+and closes it when they are all current again. Staleness is a prompt to
+recheck, not a defect: a page does not stop being correct on the day it turns
+three months old.
+
+External links are deliberately not checked automatically. Google's pages
+redirect constantly and serve 403s to bots, so the check would cry wolf often
+enough to be ignored — which is worse than not having it.
+
 ## Pull requests
 
 Commits follow [Conventional Commits](https://www.conventionalcommits.org/):
