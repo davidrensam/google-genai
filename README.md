@@ -96,9 +96,13 @@ environment. If one doesn't, that's a bug — please open an issue.
 ## Roadmap
 
 Written so far: [orientation](00-orientation/) — the ecosystem map, the
-nomenclature decoder, and prerequisites — and the [resources](resources/)
-module: the source catalog, the reference repositories, and the ecosystem
-changelog. Current focus is the glossary.
+nomenclature decoder, and prerequisites; the [glossary](12-glossary/); and the
+[resources](resources/) module — the source catalog, the reference repositories,
+and the ecosystem changelog.
+
+Current focus is [model access](03-model-access/), the module that untangles the
+two paths to a Gemini model, followed by
+[foundations](01-foundations/).
 
 ## Contributing
 

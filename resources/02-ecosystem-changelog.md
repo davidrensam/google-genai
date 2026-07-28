@@ -192,21 +192,14 @@ Developer API and Agent Platform.
 
 ## Names that are easy to confuse
 
-Not changes, but collisions — pairs of live products whose names are close
-enough to be mistaken for each other. Full definitions live in the
-[glossary](../12-glossary/00-glossary.md).
+A collision between two live products is not a change, so this page does not
+track them. The side-by-side table lives in the
+[glossary](../12-glossary/00-glossary.md#names-that-are-easy-to-confuse).
 
-| This | Is not this |
-|---|---|
-| **Gemini Enterprise** — an intranet search, AI assistant, and agentic platform for knowledge workers | **Gemini Enterprise Agent Platform** — the developer platform, formerly Vertex AI |
-| **Agent Gallery** — inside Gemini Enterprise | **Agent Garden** — inside Agent Platform, a library of prebuilt agent samples |
-| **Agent Studio** — building agents on Agent Platform | **Google AI Studio** — prototyping against the Gemini Developer API |
-| Both of the above | **Customer Experience Agent Studio** — a third one, inside Gemini Enterprise for CX |
-
-Gemini Enterprise and Agent Platform have separate documentation trees, separate
-release notes, and separate product pages. Whenever a page here means the
-application rather than the platform, it says so explicitly. See
-[related products](../11-related-products/00-gemini-enterprise-app.md).
+Worth knowing while reading the entries below: Gemini Enterprise and the Gemini
+Enterprise Agent Platform are **different products**, with separate
+documentation trees, separate release notes, and separate product pages. Where a
+page here means the application rather than the platform, it says so.
 
 ## Open questions
 
