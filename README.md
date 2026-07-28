@@ -23,7 +23,7 @@ need, and what a thing used to be called before it was renamed.
 | If you… | Go to |
 |---|---|
 | Have no idea how the pieces fit together | [`00-orientation/00-ecosystem-map.md`](00-orientation/00-ecosystem-map.md) |
-| Keep hitting names you don't recognize | [`12-glossary/`](12-glossary/) |
+| Keep hitting names you don't recognize | [`00-orientation/01-nomenclature-and-renames.md`](00-orientation/01-nomenclature-and-renames.md) |
 | Want to make your first call to a model | [`10-learning-paths/00-first-steps-with-gemini.md`](10-learning-paths/00-first-steps-with-gemini.md) |
 | Need to choose between the available APIs | [`03-model-access/06-choosing-the-right-path.md`](03-model-access/06-choosing-the-right-path.md) |
 | Are deciding whether you even need an agent | [`05-agent-development/01-when-not-to-use-an-agent.md`](05-agent-development/01-when-not-to-use-an-agent.md) |
@@ -95,10 +95,10 @@ environment. If one doesn't, that's a bug — please open an issue.
 
 ## Roadmap
 
-Written so far: the [ecosystem map](00-orientation/00-ecosystem-map.md) and the
-[resources](resources/) module — the source catalog, the reference repositories,
-and the ecosystem changelog. Current focus is the rest of orientation and the
-glossary, where the naming and renames material lives.
+Written so far: [orientation](00-orientation/) — the ecosystem map, the
+nomenclature decoder, and prerequisites — and the [resources](resources/)
+module: the source catalog, the reference repositories, and the ecosystem
+changelog. Current focus is the glossary.
 
 ## Contributing
 

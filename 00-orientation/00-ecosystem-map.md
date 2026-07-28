@@ -21,7 +21,7 @@ Find your question, go to the layer that owns it.
 | "Do I even need an agent?" | Agent framework | [05-agent-development](../05-agent-development/01-when-not-to-use-an-agent.md) |
 | "How do I ground this in my own data?" | Cross-cutting | [06-data-and-grounding](../06-data-and-grounding/00-rag-design.md) |
 | "Where does this run in production?" | Runtime and operations | [07](../07-agent-platform-google-cloud/00-overview.md) · [08](../08-production/00-reference-architecture.md) |
-| "What is this thing called now?" | — | [12-glossary](../12-glossary/01-equivalences-and-historical-names.md) |
+| "What is this thing called now?" | — | [nomenclature and renames](01-nomenclature-and-renames.md) |
 
 ## The layers
 
@@ -151,7 +151,7 @@ If you would rather follow a goal than a stack, start at
 
 And if a product name here does not match what you saw somewhere else, that is
 expected, and it has its own page:
-[nomenclature and renames](03-nomenclature-and-renames.md).
+[nomenclature and renames](01-nomenclature-and-renames.md).
 
 ---
 _Last verified: 2026-07-28 against `docs.cloud.google.com/gemini-enterprise-agent-platform`
