@@ -118,6 +118,8 @@ this creates.
 | What | URL |
 |---|---|
 | Google AI Studio | `aistudio.google.com` |
+| Gemma — product | `deepmind.google/models/gemma` |
+| Gemma — documentation | `ai.google.dev/gemma/docs` |
 | Google Antigravity | `antigravity.google` |
 | Gemini Enterprise for CX | `docs.cloud.google.com/customer-engagement-ai` |
 | Dialogflow CX | `docs.cloud.google.com/dialogflow/cx/docs` |

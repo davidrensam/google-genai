@@ -140,7 +140,7 @@ CLI, which the product page continues to market as a feature.
 So "Gemini CLI was renamed to Antigravity CLI" is wrong, and so is "Gemini CLI
 is dead". The same name is simultaneously current and switched off, and which
 one applies to you depends entirely on your licence. See
-[developer tools](../11-related-products/03-antigravity-and-developer-tools.md).
+[developer tools](../11-related-products/03-code-assistance-and-developer-tools.md).
 
 ### Gemma: split by billing tier
 
@@ -148,7 +148,7 @@ Gemma models are reachable through the Gemini API, but on the free tier only —
 the pricing page marks them unavailable on the paid tier, and they appear in
 neither the Gemini API models catalog nor the rate-limits page. The name is
 current; the availability is conditional. See
-[02-models](../02-models/03-gemma-and-open-models.md).
+[02-models](../02-models/03-gemma.md).
 
 ## The rename, visible in code
 

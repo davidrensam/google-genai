@@ -40,8 +40,8 @@ order, but the numbering tells you what each one assumes you already know.
 | 01 | [foundations](01-foundations/) | Product-agnostic concepts: LLMs, context and tokens, multimodality, prompting, structured output, function calling, embeddings and grounding |
 | 02 | [models](02-models/) | The model families, what each is for, and how to choose one |
 | 03 | [model-access](03-model-access/) | The available paths to reach a model, how authentication differs between them, regions and quotas, and which path fits your case |
-| 04 | [development-with-models](04-development-with-models/) | Building against the SDK and the REST API: reliable design, configuration, errors, retries, timeouts, testing. Includes Python and JavaScript examples |
-| 05 | [agent-development](05-agent-development/) | What an agent is, when *not* to build one, ADK, tools and MCP, multi-agent workflows, sessions and memory, evaluation, design patterns |
+| 04 | [development-with-models](04-development-with-models/) | Building against the SDK: which call surface to write, calling without the SDK, reliable design, configuration, errors, retries, timeouts, testing. Includes Python and JavaScript examples |
+| 05 | [agent-development](05-agent-development/) | What an agent is, when *not* to build one, ADK, tools and MCP, multi-agent workflows, sessions and memory, debugging, design patterns |
 | 06 | [data-and-grounding](06-data-and-grounding/) | RAG end to end: ingestion, chunking, embeddings, retrieval, reranking, citations, access control, vector search |
 | 07 | [agent-platform-google-cloud](07-agent-platform-google-cloud/) | The managed platform, organized by lifecycle: build, scale, govern, optimize |
 | 08 | [production](08-production/) | Your own stack: reference architecture, threat model, secrets, evaluations, observability, CI/CD, resilience, costs, and a final checklist |
@@ -71,7 +71,7 @@ If you prefer a goal-driven route over the module tree:
 - [A generative app with Python](10-learning-paths/01-generative-app-with-python.md)
 - [Your first agent with ADK](10-learning-paths/02-first-agent-with-adk.md)
 - [RAG over private data](10-learning-paths/03-rag-and-private-data.md)
-- [An enterprise agent in production](10-learning-paths/04-enterprise-agent-in-production.md)
+- [An agent in production](10-learning-paths/04-agent-in-production.md)
 
 ## Running the code
 

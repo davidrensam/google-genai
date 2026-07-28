@@ -61,7 +61,7 @@ This one is easy to miss and hard to overstate. Effectively every prompting
 tutorial written before this date sets at least one of them, which means the
 generic advice you will find elsewhere is now teaching a deprecated interface.
 Relevant to [prompting](../01-foundations/03-prompting.md) and to
-[configuration](../04-development-with-models/04-configuration-errors-retries-and-timeouts.md).
+[configuration](../04-development-with-models/05-configuration-errors-retries-and-timeouts.md).
 
 *Source: Gemini API release notes.*
 
@@ -96,7 +96,7 @@ models. What ended was the consumer tier of those two surfaces.
 Getting this distinction wrong in either direction is easy — "Gemini CLI is
 dead" and "nothing changed" are both wrong, and which one applies depends
 entirely on the reader's license. See
-[developer tools](../11-related-products/03-antigravity-and-developer-tools.md).
+[developer tools](../11-related-products/03-code-assistance-and-developer-tools.md).
 
 *Source: Google Developers Blog.*
 

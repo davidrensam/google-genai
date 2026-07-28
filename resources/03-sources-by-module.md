@@ -12,7 +12,7 @@ linked.
 |---|---|---|
 | [00 orientation](../00-orientation/00-ecosystem-map.md) | Agent Platform documentation root · `ai.google.dev` · [ecosystem changelog](02-ecosystem-changelog.md) | 1 |
 | [01 foundations](../01-foundations/00-generative-ai-and-llms.md) | `ai.google.dev/gemini-api/docs` · Gemini API release notes | 1 |
-| [02 models](../02-models/00-overview.md) | Agent Platform documentation → Models · Gemini API release notes | 1 |
+| [02 models](../02-models/00-overview.md) | Agent Platform documentation → Models · Gemini API release notes · `deepmind.google/models/gemma` and `ai.google.dev/gemma/docs` | 1 |
 | [03 model-access](../03-model-access/00-overview.md) | `ai.google.dev` and the Agent Platform root, read side by side · `aistudio.google.com` · Application Default Credentials documentation | 1 |
 | [04 development-with-models](../04-development-with-models/00-overview.md) | `googleapis/python-genai` and `googleapis/js-genai` source · Client Libraries · API Reference | 1, 2 |
 | [05 agent-development](../05-agent-development/00-what-is-an-agent.md) | `adk.dev` · `google/adk-python` source · `google/adk-samples` | 1, 2, **3** |
