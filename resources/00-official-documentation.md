@@ -53,10 +53,11 @@ The documentation root is organized into: Overview · Studio · Agents · Models
 Notebooks · CodeMender · API Reference · gcloud CLI Reference · Client
 Libraries · Pricing · Engineering Blog.
 
-The platform's own documentation is then organized by agent lifecycle, and the
-URLs follow it: `/build/`, `/scale`, `/govern/`, and `/optimize`.
-[Module 07](../07-agent-platform-google-cloud/00-overview.md) mirrors that
-structure, so a page there maps onto its official source without translation.
+The platform's own documentation is then organized by agent lifecycle — build,
+scale, govern, optimize — and the URLs follow it (`/build/`, `/scale`,
+`/govern/`). [Module 07](../07-agent-platform-google-cloud/00-overview.md)
+mirrors that structure, so a page there maps onto its official source without
+translation.
 
 Note that `/vertex-ai/generative-ai/docs` paths still resolve. They are the
 compatibility route, not the canonical one — prefer

@@ -95,9 +95,10 @@ environment. If one doesn't, that's a bug — please open an issue.
 
 ## Roadmap
 
-Current focus is the orientation and glossary modules, which carry most of the
-value: the ecosystem map, the naming and renames table, and the pointers to
-authoritative documentation.
+Written so far: the [ecosystem map](00-orientation/00-ecosystem-map.md) and the
+[resources](resources/) module — the source catalog, the reference repositories,
+and the ecosystem changelog. Current focus is the rest of orientation and the
+glossary, where the naming and renames material lives.
 
 ## Contributing
 

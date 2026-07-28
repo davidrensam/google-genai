@@ -9,7 +9,10 @@ here.
 
 ## Where change is announced
 
-Four feeds cover the ecosystem. Nothing important lands outside them.
+Four feeds cover the stack this repository maps. Related products keep feeds of
+their own — Gemini Enterprise has
+[separate release notes](00-official-documentation.md#gemini-enterprise) — but
+nothing that breaks the stack lands outside these four.
 
 | Feed | URL | Covers |
 |---|---|---|
@@ -156,7 +159,7 @@ Not changes, but collisions — pairs of live products whose names are close
 enough to be mistaken for each other. Full definitions live in the
 [glossary](../12-glossary/00-glossary.md).
 
-| These are different things | |
+| This | Is not this |
 |---|---|
 | **Gemini Enterprise** — an intranet search, AI assistant, and agentic platform for knowledge workers | **Gemini Enterprise Agent Platform** — the developer platform, formerly Vertex AI |
 | **Agent Gallery** — inside Gemini Enterprise | **Agent Garden** — inside Agent Platform, a library of prebuilt agent samples |
