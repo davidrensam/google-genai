@@ -40,15 +40,19 @@ uv sync
 
 ## 3. Make the call
 
-```bash
-uv run 04-development-with-models/07-python/00-first-call/main.py
+```python
+from google import genai
+
+client = genai.Client()  # reads GEMINI_API_KEY from the environment
+
+interaction = client.interactions.create(
+    model="gemini-3.6-flash",
+    input="In one sentence: what is the difference between a model and an API?",
+)
+print(interaction.outputs[-1].text)
 ```
 
-The whole program is about ten lines. Read it before running it — it is short
-enough that nothing should be mysterious, and if something is, that is the
-useful part.
-
-Two things in it are worth pausing on:
+That is the whole thing. Two points in it are worth pausing on:
 
 **The client takes no arguments.** `genai.Client()` finds your key in the
 environment. Nothing in the code names a project, a region, or a credential
@@ -60,6 +64,11 @@ deprecated — but it is no longer what the documentation recommends for new cod
 This is the first place you will feel the ecosystem moving underneath you, and
 it is covered in
 [interactions and generate_content](../04-development-with-models/02-interactions-and-generate-content.md).
+
+The runnable version of this, with error handling and the variations worth
+trying, lands in
+[04-development-with-models](../04-development-with-models/00-overview.md)
+alongside that module's prose.
 
 ## 4. Learn to date what you read
 
