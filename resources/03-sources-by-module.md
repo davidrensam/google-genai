@@ -21,7 +21,7 @@ linked.
 | [08 production](../08-production/00-reference-architecture.md) | Pricing · deprecations table · observability documentation · `adk.dev/deploy/` | 1 |
 | [09 projects](../09-projects/) | `google/adk-samples` · `GoogleCloudPlatform/generative-ai` | **3** |
 | [10 learning-paths](../10-learning-paths/00-first-steps-with-gemini.md) | Cross-cutting; no sources of its own | — |
-| [11 related-products](../11-related-products/00-gemini-enterprise-app.md) | Gemini Enterprise documentation (`/gemini/enterprise/docs`) · Dialogflow CX documentation · CodeMender documentation | 1 |
+| [11 related-products](../11-related-products/00-gemini-enterprise-app.md) | Gemini Enterprise documentation (`/gemini/enterprise/docs`) · Gemini Enterprise for CX · Dialogflow CX · `antigravity.google` · CodeMender documentation · Google Developers Blog for the CLI transition | 1, 4 |
 | [12 glossary](../12-glossary/00-glossary.md) | Every rename below · deprecations table · both release-notes feeds | 1 |
 
 ## Notes on specific modules
@@ -39,6 +39,12 @@ intended for production. Take patterns from it, not guarantees.
 for a project you are building to learn, and unacceptable as the basis for a
 claim about how something works. When a project needs a normative statement,
 source it from tier 1.
+
+**11 related-products** is the only module that leans on tier 4. The Gemini CLI
+to Antigravity transition was announced on the Google Developers Blog, and the
+announcement is the clearest statement of what changed and for whom. Use it to
+establish the date and the scope of the change, and the product documentation
+for everything else.
 
 **12 glossary** has no sources of its own by design. It is a derived artifact:
 every entry should be traceable to a change recorded in the

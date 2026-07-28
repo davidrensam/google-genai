@@ -71,6 +71,25 @@ of the sample code on the open web is now dead. Migration path is the unified
 
 *Source: Agent Platform deprecations table.*
 
+### 2026-06-18 — Gemini CLI and the Code Assist IDE extensions stopped serving requests
+
+On this date, Gemini CLI and the Gemini Code Assist IDE extensions stopped
+serving requests **for free users and Google AI Pro and Ultra subscribers**.
+The replacement is **Antigravity CLI**, which carries over Agent Skills, Hooks,
+Subagents, and Extensions — the last renamed to Antigravity plugins.
+
+The qualifier matters, and most secondary coverage drops it: **Gemini Code
+Assist is not discontinued.** Organizations on a Gemini Code Assist Standard or
+Enterprise license keep working access, with continued access to current Gemini
+models. What ended was the consumer tier of those two surfaces.
+
+Getting this distinction wrong in either direction is easy — "Gemini CLI is
+dead" and "nothing changed" are both wrong, and which one applies depends
+entirely on the reader's license. See
+[developer tools](../11-related-products/03-antigravity-and-developer-tools.md).
+
+*Source: Google Developers Blog.*
+
 ### Vertex AI became the Gemini Enterprise Agent Platform
 
 The platform's own documentation now uses **Agent Platform** as the short form,
@@ -142,6 +161,7 @@ enough to be mistaken for each other. Full definitions live in the
 | **Gemini Enterprise** — an intranet search, AI assistant, and agentic platform for knowledge workers | **Gemini Enterprise Agent Platform** — the developer platform, formerly Vertex AI |
 | **Agent Gallery** — inside Gemini Enterprise | **Agent Garden** — inside Agent Platform, a library of prebuilt agent samples |
 | **Agent Studio** — building agents on Agent Platform | **Google AI Studio** — prototyping against the Gemini Developer API |
+| Both of the above | **Customer Experience Agent Studio** — a third one, inside Gemini Enterprise for CX |
 
 Gemini Enterprise and Agent Platform have separate documentation trees, separate
 release notes, and separate product pages. Whenever a page here means the
@@ -156,10 +176,14 @@ Tracked here so they are not silently forgotten:
   current status has not been traced. Third-party sources report that Agentspace
   became Gemini Enterprise, but the official "What is Gemini Enterprise?" page
   does not mention Agentspace at all, so nothing is claimed here yet.
-- **Gemini Enterprise for Customer Experience** — a third product carrying the
-  Gemini Enterprise name. Relationship to Dialogflow CX unverified.
-- **Antigravity** — a development tool referenced by CodeMender's documentation,
-  not yet covered here.
+- **Gemini Enterprise for CX and Dialogflow CX** — both are live, both are
+  documented separately, and neither page references the other. Whether CX is
+  the successor to Dialogflow CX, a parallel offering, or something else is
+  unresolved. Given that Dialogflow's own documentation warns that products in
+  that area are being renamed, this is the open question most likely to resolve
+  itself soon.
+- **Agent Platform's Optimize phase** — the one lifecycle stage not yet verified
+  against its documentation.
 
 ## Related
 

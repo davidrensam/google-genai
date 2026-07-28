@@ -106,6 +106,8 @@ this creates.
 | What | URL |
 |---|---|
 | Google AI Studio | `aistudio.google.com` |
+| Google Antigravity | `antigravity.google` |
+| Gemini Enterprise for CX | `docs.cloud.google.com/customer-engagement-ai` |
 | Dialogflow CX | `docs.cloud.google.com/dialogflow/cx/docs` |
 | CodeMender | `docs.cloud.google.com/gemini-enterprise-agent-platform/codemender` |
 
